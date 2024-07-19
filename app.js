@@ -16,6 +16,19 @@ app.post('/api/console-payload', (req, res) => {
   const payload = req.body;
   console.log(payload);
 
+
+  let hardCodedPayload = {
+      "email": "harshitcsrivastava@gmail.com",
+      "name": "Harshit Srivastava",
+      "phone": 9453841101,
+      "tags": [
+          "test"
+      ],
+      "role": "user",
+      iat: (new Date().getTime() / 1000),
+      jti: uuid.v4(),
+  }
+
   const token = jwt.encode(payload, shared_key);
   console.log("Token:", token);
 
