@@ -29,7 +29,7 @@ app.post('/api/console-payload', (req, res) => {
       jti: uuid.v4(),
   }
 
-  const token = jwt.encode(payload, shared_key);
+  const token = jwt.encode(hardCodedPayload, shared_key);
   console.log("Token:", token);
 
   res.status(200).send(`${token}`);
