@@ -19,7 +19,7 @@ app.post('/api/console-payload', (req, res) => {
   const token = jwt.encode(payload, shared_key);
   console.log("Token:", token);
 
-  res.status(200).send('Payload received and token generated');
+  res.status(200).send(token);
 });
 
 app.listen(port, () => {
