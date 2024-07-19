@@ -1,24 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-var http = require('http');
-var jwt = require('jwt-simple');
-var uuid = require('uuid');
-var url = require('url');
+const jwt = require('jwt-simple');
+const uuid = require('uuid');
 
 const app = express();
 const port = 3000;
 
-var subdomain = 'pdi-xoogle';
+const subdomain = 'pdi-xoogle';
+const shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2';
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
-var shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2';
+
 app.post('/api/console-payload', (req, res) => {
   const payload = req.body;
   console.log(payload);
 
-  var token = jwt.encode(payload, shared_key);
-  console.log("Token",token);
+  const token = jwt.encode(payload, shared_key);
+  console.log("Token:", token);
+
+  res.status(200).send('Payload received and token generated');
 });
 
 app.listen(port, () => {
