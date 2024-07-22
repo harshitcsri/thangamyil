@@ -9,7 +9,7 @@ const port = 3000;
 
 const subdomain = 'pdi-xoogle';
 const shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2';
-
+app.use(express.urlencoded({ extended: true }))
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
 
