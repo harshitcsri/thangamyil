@@ -14,7 +14,7 @@ const shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2';
 app.use(bodyParser.json());
 
 app.post('/api/console-payload', (req, res) => {
-
+  console.log("API hit");
   // Authenticate the user
   const posts = [
     {
@@ -39,7 +39,7 @@ app.post('/api/console-payload', (req, res) => {
   const jti = Math.round(jtinumber)
 
   const userToken = req.body.user_token; // Get user_token from the request body
-
+  console.log("API hit 2",userToken);
   const username = posts.find((user) => user.user_token === userToken);
 
   if (!username) {
@@ -54,6 +54,7 @@ app.post('/api/console-payload', (req, res) => {
   }
 
   const accessToken = jwt.encode(user, shared_key)
+  console.log("API hit 3",accessToken);
   res.json({ jwt: accessToken })
 });
 
