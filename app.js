@@ -6,7 +6,9 @@ const helmet = require('helmet');
 const app = express();
 const port = 3000;
 
-const shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2'; // mobile sdk shared key 
+//const shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2'; // mobile sdk shared key 
+
+const shared_key = 'qwMu02TZxrig8K7xH2aJOcH0hW6VOFSaHk2XtA1KhId4fvp2'; // mobile sdk shared key
 
 // Use Helmet to set various HTTP headers for security
 app.use(helmet());
