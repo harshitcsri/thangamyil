@@ -8,7 +8,7 @@ const port = 3000;
 
 //const shared_key = '9b3k8q1As6kYNKhcm5CdKCEEWY2SKr3Hup0qLMlDRVnOYNp2'; // mobile sdk shared key 
 
-const shared_key = '9oaprDWJARaxjtadUdnaSYBk4XwKO2lsQEgYgRjAaCOWxa0e'; // mobile sdk shared key
+const shared_key = 'xCEXrpPRlGnBWnQhtysMocu1z1VyZsotvSqGWBkWsVg7lMwG'; // mobile sdk shared key
 
 // Use Helmet to set various HTTP headers for security
 app.use(helmet());
